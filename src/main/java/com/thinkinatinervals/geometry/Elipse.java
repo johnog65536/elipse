@@ -1,6 +1,5 @@
 package com.thinkinatinervals.geometry;
 
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 public class Elipse {

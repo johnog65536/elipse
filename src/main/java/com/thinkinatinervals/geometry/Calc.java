@@ -2,6 +2,11 @@ package com.thinkinatinervals.geometry;
 
 import org.apache.log4j.Logger;
 
+/**
+ * 
+ * @author jogden
+ *
+ */
 public class Calc {
 
 	private static Logger logger = Logger.getLogger(Calc.class);

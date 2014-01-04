@@ -13,7 +13,9 @@ public class Calc {
 		Calc c = new Calc();
 		try{
 			c.go();
-		} catch (Exception e){e.printStackTrace();}
+		} catch (Exception e){
+			logger.error("Something went wrong!", e);
+		}
 		
 		logger.debug("Done");
 	}

@@ -1,6 +1,6 @@
 package com.thinkinatinervals.geometry;
 
-public class Point {
+public class ElipsePoint {
 	private double theta;
 	private double thetaRadians;
 	private double p;
@@ -9,7 +9,7 @@ public class Point {
 	private double y; 
 	private double r;
 	
-	public Point(double p,double e,double theta){
+	public ElipsePoint(double p,double e,double theta){
 		setP(p);
 		setE(e);
 		setTheta(theta);

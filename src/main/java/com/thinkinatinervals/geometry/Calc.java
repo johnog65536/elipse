@@ -27,6 +27,5 @@ public class Calc {
 		Elipse elipse = new Elipse(p,e,numPoints);
 		
 		logger.debug("Completed elipse generation id="+elipse);
-		
 	} 
 }

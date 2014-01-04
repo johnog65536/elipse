@@ -6,7 +6,7 @@ public class Elipse {
 	private double p;
 	private double e;
 	private int numPoints;
-	private Point[] points;
+	private ElipsePoint[] points;
 	
 	private static Logger logger = Logger.getLogger(Elipse.class);
 	
@@ -16,7 +16,7 @@ public class Elipse {
 		setP(p);
 		setE(e);
 		setNumPoints(numPoints);
-		points=new Point[ numPoints ];
+		
 		 
 		calcPoints();
 	}
@@ -25,8 +25,10 @@ public class Elipse {
 
 	
 	public void calcPoints(){
+		points=new ElipsePoint[ numPoints ];
+		
 		for (int i=0;i<numPoints;i++){
-			Point point = new Point(p,e,360/numPoints*i);			
+			ElipsePoint point = new ElipsePoint(p,e,360/numPoints*i);			
 			points[i]=point;			
 			logger.debug(point);
 		}		
@@ -57,11 +59,11 @@ public class Elipse {
 		this.e = e;
 	}
 
-	public Point[] getPoints() {
+	public ElipsePoint[] getPoints() {
 		return points;
 	}
 
-	public void setPoints(Point[] points) {
+	public void setPoints(ElipsePoint[] points) {
 		this.points = points;
 	}
 	

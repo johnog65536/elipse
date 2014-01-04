@@ -8,14 +8,14 @@ public class Calc {
 
 	public static void main(String[] args) {
 		
-		logger.info("Initialising");
+		logger.debug("Initialising");
 				
 		Calc c = new Calc();
 		try{
 			c.go();
 		} catch (Exception e){e.printStackTrace();}
 		
-		logger.info("Done");
+		logger.debug("Done");
 	}
 	 
 	public void go() throws Exception{
@@ -26,7 +26,7 @@ public class Calc {
 		
 		Elipse elipse = new Elipse(p,e,numPoints);
 		
-		logger.info("Completed elipse generation id="+elipse);
+		logger.debug("Completed elipse generation id="+elipse);
 		
 	} 
 }

@@ -11,7 +11,7 @@ public class Elipse {
 	private static Logger logger = Logger.getLogger(Elipse.class);
 	
 	public Elipse (double p, double e,int numPoints){
-		logger.info("Creating Elipse with p="+p+" e="+e + " numPoints="+numPoints);
+		logger.debug("Creating Elipse with p="+p+" e="+e + " numPoints="+numPoints);
 		 
 		setP(p);
 		setE(e);
@@ -28,7 +28,7 @@ public class Elipse {
 		for (int i=0;i<numPoints;i++){
 			Point point = new Point(p,e,360/numPoints*i);			
 			points[i]=point;			
-			logger.info(point);
+			logger.debug(point);
 		}		
 	}
 

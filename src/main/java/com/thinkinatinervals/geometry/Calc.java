@@ -2,11 +2,6 @@ package com.thinkinatinervals.geometry;
 
 import org.apache.log4j.Logger;
 
-/**
- * 
- * @author jogden
- *
- */
 public class Calc {
 
 	private static Logger logger = Logger.getLogger(Calc.class);
@@ -27,7 +22,7 @@ public class Calc {
 	 
 	public void go() throws Exception{
 				
-		double p = 5;          // p=semi-lautus rectum = dist from origin north to edge of eclipse or b*b/a
+		double p = 5;          // p=semi-lautus rectum = dist from an origin vertically to edge of eclipse or b*b/a
 		double e = 0.5;        // e=excentricity of the elipse
 		int numPoints = 10;    // numpoints of the elipse to draw
 		

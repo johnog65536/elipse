@@ -22,9 +22,9 @@ public class Calc {
 	 
 	public void go() throws Exception{
 				
-		double p = 5;          // p=semi-lautus rectum = dist from an origin vertically to edge of eclipse or b*b/a
+		double p = 2;          // p=semi-lautus rectum = dist from an origin vertically to edge of eclipse or b*b/a
 		double e = 0.5;        // e=excentricity of the elipse
-		int numPoints = 10;    // numpoints of the elipse to draw
+		int numPoints = 360;    // numpoints of the elipse to draw
 		
 		Elipse elipse = new Elipse(p,e,numPoints);
 		

@@ -7,7 +7,7 @@ public class Elipse {
 	private double e;
 	private int numPoints;
 	private ElipsePoint[] points;
-	
+	private DrawingParams drawingParams;
 	private static Logger logger = Logger.getLogger(Elipse.class);
 	
 	public Elipse (double p, double e,int numPoints){
@@ -19,12 +19,28 @@ public class Elipse {
 		
 		 
 		calcPoints();
+		calcDims();
 	}
 	
 	//to do add other Elipse info, eg a, b, foci
 
+	private void calcDims(){
+		drawingParams=new DrawingParams();
+		
+		for(ElipsePoint elipsePoint:points){
+			if (elipsePoint.getX()<drawingParams.getMinX()) drawingParams.setMinX(elipsePoint.getX());
+			if (elipsePoint.getY()<drawingParams.getMinY()) drawingParams.setMinY(elipsePoint.getY());
+			if (elipsePoint.getX()>drawingParams.getMaxX()) drawingParams.setMaxX(elipsePoint.getX());
+			if (elipsePoint.getX()>drawingParams.getMaxY()) drawingParams.setMaxY(elipsePoint.getY());
+		}
+		
+		drawingParams.setWidth(drawingParams.getMaxX() - drawingParams.getMinX());
+		drawingParams.setHeight(drawingParams.getMaxY() - drawingParams.getMinY());
+		
+		logger.debug("Width="+drawingParams.getWidth()+ " Height=" + drawingParams.getHeight());
+	}
 	
-	public void calcPoints(){
+	private void calcPoints(){
 		points=new ElipsePoint[ numPoints ];
 		
 		for (int i=0;i<numPoints;i++){
@@ -66,6 +82,15 @@ public class Elipse {
 	public void setPoints(ElipsePoint[] points) {
 		this.points = points;
 	}
+
+	public DrawingParams getDrawingParams() {
+		return drawingParams;
+	}
+
+	public void setDrawingParams(DrawingParams drawingParams) {
+		this.drawingParams = drawingParams;
+	}
+	
 	
 	
 }

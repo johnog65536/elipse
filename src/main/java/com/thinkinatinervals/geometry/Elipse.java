@@ -31,11 +31,11 @@ public class Elipse {
 			if (elipsePoint.getX()<drawingParams.getMinX()) drawingParams.setMinX(elipsePoint.getX());
 			if (elipsePoint.getY()<drawingParams.getMinY()) drawingParams.setMinY(elipsePoint.getY());
 			if (elipsePoint.getX()>drawingParams.getMaxX()) drawingParams.setMaxX(elipsePoint.getX());
-			if (elipsePoint.getX()>drawingParams.getMaxY()) drawingParams.setMaxY(elipsePoint.getY());
+			if (elipsePoint.getY()>drawingParams.getMaxY()) drawingParams.setMaxY(elipsePoint.getY());
 		}
 		
-		drawingParams.setWidth(drawingParams.getMaxX() - drawingParams.getMinX());
-		drawingParams.setHeight(drawingParams.getMaxY() - drawingParams.getMinY());
+		drawingParams.setWidth(drawingParams.getMaxX() + Math.abs(drawingParams.getMinX()));
+		drawingParams.setHeight(drawingParams.getMaxY() + Math.abs(drawingParams.getMinY()));
 		
 		logger.debug("Width="+drawingParams.getWidth()+ " Height=" + drawingParams.getHeight());
 	}
